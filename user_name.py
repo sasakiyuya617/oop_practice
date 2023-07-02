@@ -1,4 +1,4 @@
-class UserName:
+class User:
     def __init__(self, name):
         if not (4 <= len(name) <= 20):
             raise ValueError(f"{name}はルール違反です")
@@ -7,8 +7,14 @@ class UserName:
 
     def screen_name(self):
         return self.name.upper()
+    
+    def self_introduction(self):
+        return f"私の名前は{self.name.upper()}です"
+     
 
-tanaka = UserName(name="tanaka")
+tanaka = User(name="tanaka")
 
 print(tanaka.screen_name())
+print(tanaka.self_introduction())
+
 
